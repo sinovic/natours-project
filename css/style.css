@@ -72,9 +72,28 @@ body {
     background-color: #B28451; }
 
 .sidebar {
-  background-color: #f0a384;
+  background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+  .sidebar__btn {
+    margin-top: 4rem;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    height: .2rem;
+    width: 4.5rem; }
+    .sidebar__btn:before, .sidebar__btn:after {
+      display: block;
+      content: '';
+      background-color: white;
+      height: .2rem;
+      width: 4.5rem; }
+    .sidebar__btn:before {
+      transform: translateY(-1.5rem); }
+    .sidebar__btn:after {
+      transform: translateY(1.3rem); }
 
 .header {
   background-color: #006ba6;
