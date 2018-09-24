@@ -7,6 +7,7 @@
   align-content: center;
   justify-items: center;
   justify-content: center;
+  padding: 3rem;
 
   &__list {
     display: grid;
@@ -21,9 +22,23 @@
     border-radius: 50%;
   }
 
-  &__details {}
+  &__sold {
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: -3px;
+  }
 
-  &__name {}
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1 / -1;
 
-  &__sold {}
+    &__list {
+      grid-template-columns: repeat(3, min-content max-content);
+    }
+  }
+
+  @media only screen and (max-width: $bp-small){
+    &__list {
+      grid-template-columns: min-content max-content;
+    }
+  }
 }
